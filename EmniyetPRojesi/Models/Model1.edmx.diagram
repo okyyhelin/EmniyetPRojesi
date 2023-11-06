@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b3931429a0b942119868ca44338ca2ed" Name="Diagram1">
+        <EntityTypeShape EntityType="EmniyetQR.dbModel.Birimler" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmniyetQR.dbModel.BirimYonetici" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmniyetQR.dbModel.Icerik" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmniyetQR.dbModel.Loglar" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmniyetQR.dbModel.Rapor" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmniyetQR.dbModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmniyetQR.dbModel.Tur" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmniyetQR.dbModel.Yonetici" Width="1.5" PointX="3.75" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="EmniyetQR.dbModel.FK_T_BirimYonetici_T_Birimler" ManuallyRouted="false" />
+        <AssociationConnector Association="EmniyetQR.dbModel.FK_T_Icerik_T_Birimler" ManuallyRouted="false" />
+        <AssociationConnector Association="EmniyetQR.dbModel.FK_T_Icerik_T_Tur1" ManuallyRouted="false" />
+        <AssociationConnector Association="EmniyetQR.dbModel.FK_T_Icerik_T_Yonetici" ManuallyRouted="false" />
+        <AssociationConnector Association="EmniyetQR.dbModel.FK_T_Rapor_T_Icerik1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

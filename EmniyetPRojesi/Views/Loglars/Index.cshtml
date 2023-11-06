@@ -1,0 +1,64 @@
+﻿@model IEnumerable<EmniyetPRojesi.Models.Loglar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TabloAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DegisiklikTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DegisiklikYapanKisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DegisiklikTuru)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YoneticiID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TabloAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DegisiklikTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DegisiklikYapanKisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DegisiklikTuru)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YoneticiID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LogID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LogID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LogID })
+        </td>
+    </tr>
+}
+
+</table>

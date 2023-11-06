@@ -1,0 +1,67 @@
+﻿@model EmniyetPRojesi.Models.Loglar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Loglar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TabloAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TabloAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DegisiklikTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DegisiklikTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DegisiklikYapanKisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DegisiklikYapanKisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DegisiklikTuru)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DegisiklikTuru)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YoneticiID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YoneticiID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LogID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

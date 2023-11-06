@@ -1,0 +1,67 @@
+﻿@model EmniyetPRojesi.Models.Icerik
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Icerik</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Path)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Path)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Birimler.BirimAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Birimler.BirimAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tur.TurAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tur.TurAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yonetici.TC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yonetici.TC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IcerikID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
