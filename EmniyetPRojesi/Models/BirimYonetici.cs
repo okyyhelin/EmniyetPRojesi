@@ -19,5 +19,6 @@ namespace EmniyetPRojesi.Models
         public Nullable<int> YoneticiID { get; set; }
     
         public virtual Birimler Birimler { get; set; }
+        public virtual Yonetici Yonetici { get; set; }
     }
 }

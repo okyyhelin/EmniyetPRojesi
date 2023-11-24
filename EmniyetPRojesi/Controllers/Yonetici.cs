@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EmniyetPRojesi.Models
+namespace EmniyetPRojesi.Controllers
 {
     using System;
     using System.Collections.Generic;
@@ -28,16 +28,7 @@ namespace EmniyetPRojesi.Models
         public string Sifre { get; set; }
         public string EPosta { get; set; }
         public string Tel { get; set; }
-
-        public string AdSoyad 
-        {
-            get
-            {
-                return Isim + " " + Soyisim;
-            }
-                }
-
-
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Icerik> Icerik { get; set; }
     }

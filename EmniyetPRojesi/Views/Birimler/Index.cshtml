@@ -18,17 +18,18 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.BirimAdi)
-        </td>
-        <td>
-            @Html.ActionLink("Düzenle", "Edit", new { id = item.BirimID }, new { @class = "btn bt-sm btn-outline-warning" }) |
-            @Html.ActionLink("Detay", "Details", new { id = item.BirimID }, new { @class = "btn bt-sm btn-outline-info" }) |
-            @Html.ActionLink("Sil", "Delete", new { id = item.BirimID }, new { @class = "btn bt-sm btn-outline-danger"}) 
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirimAdi)
+            </td>
+            <td>
+                @Html.ActionLink("Düzenle", "Edit", new { id = item.BirimID }, new { @class = "btn bt-sm btn-outline-warning" }) |
+                @Html.ActionLink("Detay", "Details", new { id = item.BirimID }, new { @class = "btn bt-sm btn-outline-info" }) |
+                @Html.ActionLink("Sil", "Delete", new { id = item.BirimID }, new { @class = "btn bt-sm btn-outline-danger" })
+            </td>
+        </tr>
+    }
 
 </table>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EmniyetQR.dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EmniyetQR.dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Birimler">
           <Key>
             <PropertyRef Name="BirimID" />
@@ -78,7 +78,7 @@
           <Property Name="Isim" Type="nvarchar" MaxLength="50" />
           <Property Name="Soyisim" Type="nvarchar" MaxLength="50" />
           <Property Name="KullaniciAdi" Type="varchar" MaxLength="50" />
-          <Property Name="Sifre" Type="nvarchar" MaxLength="8" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="50" />
           <Property Name="EPosta" Type="varchar" MaxLength="100" />
           <Property Name="Tel" Type="nvarchar" MaxLength="11" />
         </EntityType>
@@ -203,8 +203,7 @@
             <End Role="Rapor" EntitySet="Rapor" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EmniyetQR.dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -290,7 +289,7 @@
           <Property Name="Isim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Soyisim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Sifre" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="EPosta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Tel" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Icerik" Relationship="Self.FK_T_Icerik_T_Yonetici" FromRole="Yonetici" ToRole="Icerik" />

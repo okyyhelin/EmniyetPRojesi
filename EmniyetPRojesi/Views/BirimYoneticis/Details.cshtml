@@ -1,0 +1,35 @@
+﻿@model EmniyetPRojesi.Models.BirimYonetici
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BirimYonetici</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.YoneticiID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YoneticiID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Birimler.BirimAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Birimler.BirimAdi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BirimYoneticiID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

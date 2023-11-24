@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EmniyetPRojesi.Models.BirimYonetici>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Yönetici Adı
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birimler.BirimAdi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yonetici.AdSoyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Birimler.BirimAdi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BirimYoneticiID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BirimYoneticiID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BirimYoneticiID })
+        </td>
+    </tr>
+}
+
+</table>

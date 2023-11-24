@@ -6,7 +6,7 @@ using System.Web;
 
 namespace EmniyetPRojesi.Models.Helper
 {
-    public static class Uygulama
+    public static class UygulamaHelper
     {
         public static string CreateMD5(string input)
         {
@@ -19,7 +19,7 @@ namespace EmniyetPRojesi.Models.Helper
                 //return Convert.ToHexString(hashBytes); // .NET 5 +
 
                 // Convert the byte array to hexadecimal string prior to .NET 5
-                StringBuilder sb = new System.Text.StringBuilder();
+                 StringBuilder sb = new System.Text.StringBuilder();
                 for (int i = 0; i < hashBytes.Length; i++)
                 {
                     sb.Append(hashBytes[i].ToString("X2"));
