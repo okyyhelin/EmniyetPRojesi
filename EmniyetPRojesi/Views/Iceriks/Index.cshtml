@@ -26,6 +26,9 @@
             @Html.DisplayNameFor(model => model.Tur.TurAdi)
         </th>
         <th>
+            Okunma Sayısı
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Yonetici.TC)
         </th>
         <th></th>
@@ -33,13 +36,6 @@
 
 @foreach (var item in Model) {
     <tr>
-
-        <td>
-            @Html.DisplayFor(modelItem => item.QR)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.URL)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Birimler.BirimAdi)
         </td>
@@ -47,12 +43,21 @@
             @Html.DisplayFor(modelItem => item.Tur.TurAdi)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Yonetici.TC)
+            <img src="@item.QR" width="50" />
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IcerikID }, new { @class = "btn bt-sm btn-outline-info" }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IcerikID }, new { @class = "btn bt-sm bt-outline-info"}) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IcerikID }, new {@clas = "btn bt-sm bt-outline-info"})
+            @Html.DisplayFor(modelItem => item.URL)
+        </td>
+        <td>
+            @item.Rapor.Count()
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yonetici.AdSoyad)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.IcerikID }, new { @class = "btn bt-sm btn-outline-info" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.IcerikID }, new { @class = "btn bt-sm bt-outline-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IcerikID }, new { @clas = "btn bt-sm bt-outline-info" })
         </td>
     </tr>
 }

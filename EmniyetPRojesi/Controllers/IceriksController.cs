@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using EmniyetPRojesi.Models;
+using QRCoder;
+using static QRCoder.PayloadGenerator;
 
 namespace EmniyetPRojesi.Controllers
 {
@@ -55,6 +58,31 @@ namespace EmniyetPRojesi.Controllers
             if (ModelState.IsValid)
             {
                 db.Icerik.Add(icerik);
+                db.SaveChanges();
+                string link = $"{this.Request.Url.Scheme}://{this.Request.Url.Host}:{this.Request.Url.Port}" + "/Home/Icerik/" + icerik.IcerikID;
+                icerik.URL = link;
+                Url generator = new Url(link);
+                string payload = generator.ToString();
+
+                QRCodeGenerator qrGenerator = new QRCodeGenerator();
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload, QRCodeGenerator.ECCLevel.Q);
+                QRCode qrCode = new QRCode(qrCodeData);
+                var qrCodeAsBitmap = qrCode.GetGraphic(20);
+
+                string path = Path.Combine(Server.MapPath("~/Files/QRCodes"));
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+                string dosyadi = "qrcode_" + DateTime.Now.Ticks;
+                string filePath = Path.Combine(Server.MapPath("~/Files/QRCodes/"+ dosyadi+ ".png"));
+                qrCodeAsBitmap.Save(filePath);
+                string fileName = Path.GetFileName(filePath);
+         
+
+                string imageUrl =  "/Files/QRCodes/" + fileName;
+                icerik.QR = imageUrl;
+                db.Entry(icerik).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
