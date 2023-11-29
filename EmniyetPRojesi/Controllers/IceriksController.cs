@@ -38,6 +38,26 @@ namespace EmniyetPRojesi.Controllers
             }
             return View(icerik);
         }
+        public ActionResult Rapor(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Icerik icerik = db.Icerik.Find(id);
+            if (icerik == null)
+            {
+                return HttpNotFound();
+            }
+
+            ViewBag.RaporID = new SelectList(db.Rapor, "RaporID", "IcerikID");
+            ViewBag.Tarih = new SelectList(db.Rapor, "RaporID", "Tarih");
+
+            return View(icerik);
+        }
+
+
 
         // GET: Iceriks/Create
         public ActionResult Create()

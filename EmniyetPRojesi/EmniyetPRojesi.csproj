@@ -407,6 +407,7 @@
     <Content Include="Views\BirimYoneticis\Details.cshtml" />
     <Content Include="Views\BirimYoneticis\Edit.cshtml" />
     <Content Include="Views\BirimYoneticis\Index.cshtml" />
+    <Content Include="Views\Iceriks\Rapor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

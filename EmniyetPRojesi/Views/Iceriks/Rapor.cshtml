@@ -1,0 +1,35 @@
+﻿
+@{@model EmniyetPRojesi.Models.Icerik
+
+ViewBag.Title = "Rapor";
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Rapor Detayları</h2>
+
+
+<div>
+    <h4>Icerik ID: @Model.IcerikID</h4>
+    <p>Birim: @Model.Birimler.BirimAdi</p>
+    <p>Toplam Okutulma Sayısı: @Model.Rapor.Count</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Okutulma Tarihi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ int sayac = 1;}
+            @foreach (var item in Model.Rapor)
+            {
+                <tr>
+                    <td>@sayac</td>
+                    <td>@item.Tarih</td>
+                </tr>
+                sayac++;
+            }
+        </tbody>
+    </table>
+</div>
+
