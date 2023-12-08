@@ -1550,7 +1550,9 @@ dropdown-item
 Custom-select
 ******************/
 .custom-select {
-  background: url(../../assets/images/custom-select.png) right 0.75rem center no-repeat; }
+    background: url(../../Designer/images.jpg) right 12rem center no-repeat;
+    background-size: cover;
+}
 
 /*******************
 textarea

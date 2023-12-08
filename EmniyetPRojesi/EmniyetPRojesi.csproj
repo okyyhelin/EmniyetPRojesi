@@ -341,12 +341,15 @@
     <Content Include="Designer\css\colors\red-dark.css" />
     <Content Include="Designer\css\colors\red.css" />
     <Content Include="Designer\css\form.css" />
+    <Content Include="Designer\css\icons\favicon.png" />
     <Content Include="Designer\css\icons\font-awesome\css\font-awesome.css" />
     <Content Include="Designer\css\icons\font-awesome\old\css\font-awesome.css" />
     <Content Include="Designer\css\icons\simple-line-icons\css\simple-line-icons.css" />
     <Content Include="Designer\css\icons\themify-icons\themify-icons.css" />
     <Content Include="Designer\css\spinners.css" />
     <Content Include="Designer\css\style.css" />
+    <Content Include="Designer\images.jpg" />
+    <Content Include="Designer\js\bootstrap.js" />
     <Content Include="Designer\js\chat.js" />
     <Content Include="Designer\js\custom.js" />
     <Content Include="Designer\js\custom.min.js" />
@@ -365,6 +368,7 @@
     <Content Include="Designer\js\mask.js" />
     <Content Include="Designer\js\morris-data.js" />
     <Content Include="Designer\js\perfect-scrollbar.min.js" />
+    <Content Include="Designer\js\popper.min.js" />
     <Content Include="Designer\js\sidebarmenu.js" />
     <Content Include="Designer\js\toastr.js" />
     <Content Include="Designer\js\validation.js" />
@@ -3257,6 +3261,7 @@
     <Content Include="Designer\scss\icons\weather-icons\less\css\variables-night.css" />
     <Content Include="Designer\scss\icons\weather-icons\less\css\variables-time.css" />
     <Content Include="Designer\scss\icons\weather-icons\less\css\variables-wind-names.css" />
+    <Content Include="Designer\van_emniyet_logo.png" />
     <Content Include="Designer\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Designer\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Designer\vendor\bootstrap\js\bootstrap.js" />
