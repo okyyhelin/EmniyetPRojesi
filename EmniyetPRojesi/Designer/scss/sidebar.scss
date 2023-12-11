@@ -1,5 +1,5 @@
 /*
-Template Name: Material Pro Admin
+Template Name: Monster Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
@@ -197,7 +197,7 @@ sidebar navigation
                 font-size: 12px;
                 margin-bottom: 0px;
                 padding: 14px 14px 14px 20px;
-                color: $dark; 
+                color: $muted;
                 font-weight: 500;
             }
             &.nav-devider{
@@ -232,7 +232,6 @@ sidebar navigation
             width: 27px;
             height: 27px;                                                                                                                                                                           
             font-size: 21px;
-            line-height:27px; 
             display: inline-block;
             vertical-align: middle;
             color: $sidebar-icons;

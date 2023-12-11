@@ -1,23 +1,11 @@
 /*
-Template Name: Material Pro Admin
+Template Name: Monster Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
 */
-/**
- * Table Of Content
- *
- * 	1. Globals
- *	2. Headers
- *	3. Navigations
- *	4. Banners
- *	5. Footers
- *	6. app
- *	7. Widgets
- *	8. Custom Templates
- */
 /*
-Template Name: Material Pro Admin
+Template Name: Monster Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
@@ -52,7 +40,7 @@ File: scss
     left: calc(50% - 3.5px); }
 
 /*
-Template Name: Material Pro Admin
+Template Name: Monster Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
@@ -72,6 +60,9 @@ File: scss
 /******************* 
 Global Styles 
 *******************/
+.card {
+  background: #263238; }
+
 * {
   outline: none; }
 
@@ -80,7 +71,7 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   overflow-x: hidden;
-  color: #67757c;
+  color: #747d8a;
   font-weight: 300; }
 
 html {
@@ -97,9 +88,9 @@ a.link {
     color: #009efb; }
 
 .img-responsive {
+  display: inline-block;
   width: 100%;
-  height: auto;
-  display: inline-block; }
+  height: auto; }
 
 .img-rounded {
   border-radius: 4px; }
@@ -156,11 +147,11 @@ h6 {
   border-radius: 4px;
   padding: 10px; }
 
-html body .dl {
-  display: inline-block; }
+.dl {
+  display: inline-block !important; }
 
-html body .db {
-  display: block; }
+.db {
+  display: block !important; }
 
 .no-wrap td, .no-wrap th {
   white-space: nowrap; }
@@ -462,7 +453,7 @@ html body .text-megna {
   color: #00897b; }
 
 html body .text-dark {
-  color: #67757c; }
+  color: #747d8a; }
 
 html body .text-themecolor {
   color: #009efb; }
@@ -519,7 +510,7 @@ html body .bg-light-inverse {
   background-color: #f6f6f6; }
 
 html body .bg-light {
-  background-color: #f2f4f8; }
+  background-color: #383f48; }
 
 html body .bg-white {
   background-color: #ffffff; }
@@ -606,7 +597,7 @@ Labels
   background-color: #2f3d4a; }
 
 .label-default {
-  background-color: #f2f4f8; }
+  background-color: #383f48; }
 
 .label-white {
   background-color: #ffffff; }
@@ -660,7 +651,7 @@ Pagination
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  background-color: #f2f4f8; }
+  background-color: #383f48; }
 
 .pagination-split li {
   margin-left: 5px;
@@ -712,7 +703,11 @@ Table Cell
   font-weight: 500; }
 
 .table-hover tbody tr:hover {
-  background: #f2f4f8; }
+  background: #383f48; }
+
+.jqstooltip {
+  width: auto !important;
+  height: auto !important; }
 
 .v-middle td, .v-middle th {
   vertical-align: middle; }
@@ -877,7 +872,7 @@ Buttons
   color: #ffffff !important;
   margin-bottom: 0px; }
   .btn-group label.btn-secondary {
-    color: #67757c !important; }
+    color: #747d8a !important; }
 
 .btn-lg {
   padding: .75rem 1.5rem;
@@ -952,7 +947,7 @@ Buttons
   -o-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
   background-color: #ffffff;
-  color: #67757c; }
+  color: #747d8a; }
   .btn-secondary:hover,
   .btn-secondary.disabled:hover {
     -webkit-box-shadow: 0 14px 26px -12px rgba(169, 169, 169, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(169, 169, 169, 0.2);
@@ -1521,7 +1516,7 @@ Megamenu
       margin: 0px; }
       .mega-dropdown .nav-accordion .card-header h5 a {
         text-decoration: none;
-        color: #67757c; }
+        color: #747d8a; }
 
 /*******************
 List-style-none
@@ -1532,7 +1527,7 @@ ul.list-style-none {
   ul.list-style-none li {
     list-style: none; }
     ul.list-style-none li a {
-      color: #67757c;
+      color: #747d8a;
       padding: 8px 0px;
       display: block;
       text-decoration: none; }
@@ -1544,15 +1539,13 @@ dropdown-item
 ******************/
 .dropdown-item {
   padding: 8px 1rem;
-  color: #67757c; }
+  color: #747d8a; }
 
 /*******************
 Custom-select
 ******************/
 .custom-select {
-    background: url(../../Designer/images.jpg) right 12rem center no-repeat;
-    background-size: cover;
-}
+  background: url(../../assets/images/custom-select.png) right 0.75rem center no-repeat; }
 
 /*******************
 textarea
@@ -1564,7 +1557,7 @@ textarea {
 Form-control
 ******************/
 .form-control {
-  color: #67757c;
+  color: #747d8a;
   min-height: 38px;
   display: initial; }
 
@@ -1602,7 +1595,7 @@ Layouts
 ******************/
 /*Card-noborders*/
 .card-no-border .card {
-  border-color: #d7dfe3;
+  border-color: #3e4e56;
   border-radius: 4px;
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05); }
@@ -1619,19 +1612,6 @@ Layouts
 
 .card-outline-danger, .card-outline-info, .card-outline-warning, .card-outline-success, .card-outline-primary {
   background: #ffffff; }
-
-.card-fullscreen {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  overflow: auto; }
-
-.card .card-header {
-  background: #ffffff;
-  border-bottom: 0px; }
 
 /*******************/
 /*widgets -app*/
@@ -1650,11 +1630,6 @@ Layouts
 
 .single-column .page-wrapper {
   margin-left: 0px; }
-
-.fix-width {
-  width: 100%;
-  max-width: 1170px;
-  margin: 0 auto; }
 
 /*
 Template Name: Material Pro Admin
@@ -1680,7 +1655,7 @@ File: scss
     display: none; }
 
 .page-wrapper {
-  background: #eef5f9;
+  background: #383f48;
   padding-bottom: 60px; }
 
 .container-fluid {
@@ -1766,9 +1741,9 @@ File: scss
       .topbar ul.dropdown-user li a {
         padding: 9px 15px;
         display: block;
-        color: #67757c; }
+        color: #747d8a; }
         .topbar ul.dropdown-user li a:hover {
-          background: #f2f4f8;
+          background: #383f48;
           color: #009efb;
           text-decoration: none; }
 
@@ -1815,7 +1790,7 @@ File: scss
  Breadcrumb and page title
 *******************/
 .page-titles {
-  background: #ffffff;
+  background: #263238;
   margin: 0 -30px 30px;
   padding: 15px;
   -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
@@ -1943,7 +1918,7 @@ File: scss
   float: left;
   width: 100%; }
   .chatonline li a span {
-    color: #67757c; }
+    color: #747d8a; }
     .chatonline li a span small {
       display: block;
       font-size: 10px; }
@@ -2087,7 +2062,7 @@ ul#themecolors {
 *******************/
 .footer {
   bottom: 0;
-  color: #67757c;
+  color: #747d8a;
   left: 0px;
   padding: 17px 15px;
   position: absolute;
@@ -2166,7 +2141,7 @@ ul#themecolors {
   float: right; }
   .card-actions a {
     cursor: pointer;
-    color: #67757c;
+    color: #747d8a;
     opacity: 0.7;
     padding-left: 7px;
     font-size: 13px; }
@@ -2255,7 +2230,7 @@ ul.list-icons {
     -o-transition: 0.2s ease-in;
     transition: 0.2s ease-in; }
     ul.list-icons li a {
-      color: #67757c; }
+      color: #747d8a; }
       ul.list-icons li a:hover {
         color: #009efb; }
     ul.list-icons li i {
@@ -2288,8 +2263,8 @@ html body .accordion .card {
 
 html body .jqstooltip,
 html body .flotTip {
-  width: auto !important;
-  height: auto !important;
+  width: auto;
+  height: auto;
   background: #263238;
   color: #ffffff;
   padding: 5px 10px; }
@@ -2364,9 +2339,10 @@ Dashboard1 chart
   .amp-pxl .ct-series-b .ct-bar {
     stroke: #26c6da; }
 
-.c3-chart-arcs-title, .c3-legend-item {
+.c3-chart-arcs-title,
+.c3-legend-item {
   font-family: "Poppins", sans-serif;
-  fill: #67757c; }
+  fill: #747d8a; }
 
 html body #visitor .c3-chart-arcs-title {
   font-size: 18px;
@@ -2401,23 +2377,27 @@ Dashboard2 chart
   .campaign .ct-series-a .ct-area {
     fill-opacity: 0.2;
     fill: url(#gradient); }
-  .campaign .ct-series-a .ct-line, .campaign .ct-series-a .ct-point {
+  .campaign .ct-series-a .ct-line,
+  .campaign .ct-series-a .ct-point {
     stroke: #26c6da;
     stroke-width: 2px; }
   .campaign .ct-series-b .ct-area {
     fill: #1e88e5;
     fill-opacity: 0.1; }
-  .campaign .ct-series-b .ct-line, .campaign .ct-series-b .ct-point {
+  .campaign .ct-series-b .ct-line,
+  .campaign .ct-series-b .ct-point {
     stroke: #1e88e5;
     stroke-width: 2px; }
-  .campaign .ct-series-a .ct-point, .campaign .ct-series-b .ct-point {
+  .campaign .ct-series-a .ct-point,
+  .campaign .ct-series-b .ct-point {
     stroke-width: 6px; }
 
 .campaign2 .ct-series-a .ct-area {
   fill-opacity: 0.2;
   fill: url(#gradient); }
 
-.campaign2 .ct-series-a .ct-line, .campaign2 .ct-series-a .ct-point {
+.campaign2 .ct-series-a .ct-line,
+.campaign2 .ct-series-a .ct-point {
   stroke: #26c6da;
   stroke-width: 2px; }
 
@@ -2425,11 +2405,13 @@ Dashboard2 chart
   fill: #1e88e5;
   fill-opacity: 0.1; }
 
-.campaign2 .ct-series-b .ct-line, .campaign2 .ct-series-b .ct-point {
+.campaign2 .ct-series-b .ct-line,
+.campaign2 .ct-series-b .ct-point {
   stroke: #1e88e5;
   stroke-width: 2px; }
 
-.campaign2 .ct-series-a .ct-point, .campaign2 .ct-series-b .ct-point {
+.campaign2 .ct-series-a .ct-point,
+.campaign2 .ct-series-b .ct-point {
   stroke-width: 6px; }
 
 .usage .ct-series-a .ct-line {
@@ -2455,7 +2437,7 @@ Dashboard3 chart
   .ct-chart .ct-series-a .ct-slice-donut {
     stroke: #26c6da; }
   .ct-chart .ct-series-b .ct-slice-donut {
-    stroke: #f2f4f8; }
+    stroke: #383f48; }
   .ct-chart .ct-series-c .ct-slice-donut {
     stroke: #1e88e5; }
 
@@ -2509,12 +2491,6 @@ Dashboard4 chart
     fill-opacity: 0.2; }
 
 /*============================================================== 
-Dashboard6 chart
- ============================================================== */
-.product-overview.table tbody tr td {
-  vertical-align: middle; }
-
-/*============================================================== 
 Widget-data
  ============================================================== */
 .sparkchart {
@@ -2544,8 +2520,9 @@ File upload
 .fileinput .input-group-addon {
   border: none;
   border-bottom: 1px solid #d9d9d9;
-  background: #ffffff;
-  margin-bottom: 1px; }
+  background: transparent;
+  margin-bottom: 1px;
+  color: #747d8a; }
 
 .fileinput .form-control {
   padding-top: 7px;
@@ -2609,14 +2586,17 @@ widget-chart-page product review
   text-align: center;
   background: rgba(7, 10, 43, 0.8); }
 
-.profile-tab li a.nav-link, .customtab li a.nav-link {
+.profile-tab li a.nav-link,
+.customtab li a.nav-link {
   border: 0px;
   padding: 15px 20px;
-  color: #67757c; }
-  .profile-tab li a.nav-link.active, .customtab li a.nav-link.active {
+  color: #747d8a; }
+  .profile-tab li a.nav-link.active,
+  .customtab li a.nav-link.active {
     border-bottom: 2px solid #009efb;
     color: #009efb; }
-  .profile-tab li a.nav-link:hover, .customtab li a.nav-link:hover {
+  .profile-tab li a.nav-link:hover,
+  .customtab li a.nav-link:hover {
     color: #009efb; }
 
 /*============================================================== 
@@ -2632,11 +2612,11 @@ Form addons page
   clear: both;
   font-weight: 400;
   line-height: 1.42857143;
-  color: #67757c;
+  color: #747d8a;
   white-space: nowrap; }
   .bootstrap-select .dropdown-menu li a:hover, .bootstrap-select .dropdown-menu li a:focus {
     color: #009efb;
-    background: #f2f4f8; }
+    background: #383f48; }
 
 .bootstrap-select .show > .dropdown-menu {
   display: block; }
@@ -2674,7 +2654,9 @@ Form Material page
   -o-transition: background 0s ease-out 0s;
   transition: background 0s ease-out 0s; }
 
-.form-material .form-control, .form-material .form-control.focus, .form-material .form-control:focus {
+.form-material .form-control,
+.form-material .form-control.focus,
+.form-material .form-control:focus {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#d9d9d9), to(#d9d9d9));
   background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#d9d9d9, #d9d9d9);
   background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#d9d9d9, #d9d9d9);
@@ -2685,7 +2667,8 @@ Form Material page
   box-shadow: none;
   float: none; }
 
-.form-material .form-control.focus, .form-material .form-control:focus {
+.form-material .form-control.focus,
+.form-material .form-control:focus {
   background-size: 100% 2px, 100% 1px;
   outline: 0 none;
   -webkit-transition-duration: 0.3s;
@@ -2716,6 +2699,8 @@ Form Material page
   font-family: "Poppins", sans-serif;
   border-radius: 0px;
   border-bottom: 1px solid #d9d9d9; }
+  .floating-labels .form-control:focus {
+    color: #747d8a; }
 
 .floating-labels select.form-control > option {
   font-size: 14px; }
@@ -2734,7 +2719,7 @@ Form Material page
   border: none; }
 
 .floating-labels label {
-  color: #67757c;
+  color: #747d8a;
   position: absolute;
   cursor: auto;
   top: 5px;
@@ -2745,8 +2730,7 @@ Form Material page
 
 .floating-labels .focused label {
   top: -20px;
-  font-size: 12px;
-  color: #263238; }
+  font-size: 12px; }
 
 .floating-labels .bar {
   position: relative;
@@ -2819,10 +2803,14 @@ Form Material page
 .has-feedback label ~ .t-0 {
   top: 0; }
 
-.form-group.error input, .form-group.error select, .form-group.error textarea {
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
   border: 1px solid #fc4b6c; }
 
-.form-group.validate input, .form-group.validate select, .form-group.validate textarea {
+.form-group.validate input,
+.form-group.validate select,
+.form-group.validate textarea {
   border: 1px solid #26c6da; }
 
 .form-group.error .help-block ul {
@@ -2846,7 +2834,7 @@ Pagination
 .pagination-circle li a {
   width: 40px;
   height: 40px;
-  background: #f2f4f8;
+  background: #383f48;
   border: 0px;
   text-align: center;
   border-radius: 100%; }
@@ -2857,7 +2845,7 @@ Pagination
     color: #ffffff; }
 
 .pagination-circle li.disabled a {
-  background: #f2f4f8;
+  background: #383f48;
   color: rgba(120, 130, 140, 0.13); }
 
 /*******************
@@ -2893,14 +2881,19 @@ Form Pickers
 table th {
   font-weight: 400; }
 
-.daterangepicker td.active, .daterangepicker td.active:hover {
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
   background-color: #009efb; }
 
-.datepicker table tr td.today, .datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:hover, .datepicker table tr td.today:hover {
+.datepicker table tr td.today,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today:hover {
   background: #009efb;
   color: #ffffff; }
 
-.datepicker td, .datepicker th {
+.datepicker td,
+.datepicker th {
   padding: 5px 10px; }
 
 /*******************
@@ -2965,7 +2958,8 @@ Form icheck
 /*******************
 Form summernote
 ******************/
-.note-popover, .note-icon-caret {
+.note-popover,
+.note-icon-caret {
   display: none; }
 
 .note-editor.note-frame {
@@ -2980,7 +2974,8 @@ Form summernote
 /*******************
 Table-Layout
 ******************/
-.table thead th, .table th {
+.table thead th,
+.table th {
   border: 0px; }
 
 .color-table.primary-table thead th {
@@ -2988,7 +2983,7 @@ Table-Layout
   color: #ffffff; }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background: #f2f4f8; }
+  background: #383f48; }
 
 .color-table.success-table thead th {
   background-color: #26c6da;
@@ -3263,10 +3258,10 @@ Table-Data Table
   margin-top: 10px; }
   .dataTables_filter input {
     border: 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#d9d9d9), to(#d9d9d9));
-    background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#d9d9d9, #d9d9d9);
-    background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#d9d9d9, #d9d9d9);
-    background-image: linear-gradient(#009efb, #009efb), linear-gradient(#d9d9d9, #d9d9d9);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#383f48), to(#383f48));
+    background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#383f48, #383f48);
+    background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#383f48, #383f48);
+    background-image: linear-gradient(#009efb, #009efb), linear-gradient(#383f48, #383f48);
     background-size: 0 2px, 100% 1px;
     background-repeat: no-repeat;
     background-position: center bottom, center calc(100% - 1px);
@@ -3278,13 +3273,14 @@ Table-Data Table
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 0;
-    margin-left: 10px; }
+    margin-left: 10px;
+    color: #747d8a; }
     .dataTables_filter input:focus {
       outline: none;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#d9d9d9), to(#d9d9d9));
-      background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#d9d9d9, #d9d9d9);
-      background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#d9d9d9, #d9d9d9);
-      background-image: linear-gradient(#009efb, #009efb), linear-gradient(#d9d9d9, #d9d9d9);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#383f48), to(#383f48));
+      background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#383f48, #383f48);
+      background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#383f48, #383f48);
+      background-image: linear-gradient(#009efb, #009efb), linear-gradient(#383f48, #383f48);
       background-size: 100% 2px, 100% 1px;
       -webkit-box-shadow: none;
       box-shadow: none;
@@ -3333,7 +3329,7 @@ table.dataTable thead .sorting:after {
   text-decoration: none;
   cursor: pointer;
   *cursor: hand;
-  color: #67757c;
+  color: #747d8a;
   border: 1px solid #ddd; }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
@@ -3346,7 +3342,7 @@ table.dataTable thead .sorting:after {
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
   cursor: default;
-  color: #67757c;
+  color: #747d8a;
   border: 1px solid #ddd;
   background: transparent;
   -webkit-box-shadow: none;
@@ -3359,7 +3355,7 @@ table.dataTable thead .sorting:after {
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:active {
   outline: none;
-  background-color: #67757c; }
+  background-color: #747d8a; }
 
 .dataTables_wrapper .dataTables_paginate .ellipsis {
   padding: 0 1em; }
@@ -3368,7 +3364,7 @@ table.dataTable thead .sorting:after {
 Table- responsive
 ******************/
 .tablesaw-bar .btn-group label {
-  color: #67757c !important; }
+  color: #747d8a !important; }
 
 /*******************
 Table- editable table
@@ -3385,7 +3381,8 @@ Table- editable table
     padding: 5px 10px;
     border-radius: 4px;
     border: 0px; }
-  .paging_simple_numbers .pagination .paginate_button.active a, .paging_simple_numbers .pagination .paginate_button:hover a {
+  .paging_simple_numbers .pagination .paginate_button.active a,
+  .paging_simple_numbers .pagination .paginate_button:hover a {
     background: #1e88e5;
     color: #ffffff; }
 
@@ -3394,10 +3391,10 @@ Table- Footable
 ******************/
 #demo-show-entries {
   border: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#d9d9d9), to(#d9d9d9));
-  background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#d9d9d9, #d9d9d9);
-  background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#d9d9d9, #d9d9d9);
-  background-image: linear-gradient(#009efb, #009efb), linear-gradient(#d9d9d9, #d9d9d9);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#383f48), to(#383f48));
+  background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#383f48, #383f48);
+  background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#383f48, #383f48);
+  background-image: linear-gradient(#009efb, #009efb), linear-gradient(#383f48, #383f48);
   background-size: 0 2px, 100% 1px;
   background-repeat: no-repeat;
   background-position: center bottom, center calc(100% - 1px);
@@ -3406,13 +3403,13 @@ Table- Footable
   -o-transition: background 0s ease-out;
   transition: background 0s ease-out;
   padding-bottom: 5px;
-  color: #67757c; }
+  color: #747d8a; }
   #demo-show-entries:focus {
     outline: none;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#d9d9d9), to(#d9d9d9));
-    background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#d9d9d9, #d9d9d9);
-    background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#d9d9d9, #d9d9d9);
-    background-image: linear-gradient(#009efb, #009efb), linear-gradient(#d9d9d9, #d9d9d9);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#383f48), to(#383f48));
+    background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#383f48, #383f48);
+    background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#383f48, #383f48);
+    background-image: linear-gradient(#009efb, #009efb), linear-gradient(#383f48, #383f48);
     background-size: 100% 2px, 100% 1px;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -3422,10 +3419,10 @@ Table- Footable
 
 #demo-input-search2 {
   border: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#d9d9d9), to(#d9d9d9));
-  background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#d9d9d9, #d9d9d9);
-  background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#d9d9d9, #d9d9d9);
-  background-image: linear-gradient(#009efb, #009efb), linear-gradient(#d9d9d9, #d9d9d9);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#383f48), to(#383f48));
+  background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#383f48, #383f48);
+  background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#383f48, #383f48);
+  background-image: linear-gradient(#009efb, #009efb), linear-gradient(#383f48, #383f48);
   background-size: 0 2px, 100% 1px;
   background-repeat: no-repeat;
   background-position: center bottom, center calc(100% - 1px);
@@ -3438,13 +3435,13 @@ Table- Footable
   box-shadow: none;
   border-radius: 0;
   margin-left: 10px;
-  color: #67757c; }
+  color: #747d8a; }
   #demo-input-search2:focus {
     outline: none;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#d9d9d9), to(#d9d9d9));
-    background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#d9d9d9, #d9d9d9);
-    background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#d9d9d9, #d9d9d9);
-    background-image: linear-gradient(#009efb, #009efb), linear-gradient(#d9d9d9, #d9d9d9);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#009efb), to(#009efb)), -webkit-gradient(linear, left top, left bottom, from(#383f48), to(#383f48));
+    background-image: -webkit-linear-gradient(#009efb, #009efb), -webkit-linear-gradient(#383f48, #383f48);
+    background-image: -o-linear-gradient(#009efb, #009efb), -o-linear-gradient(#383f48, #383f48);
+    background-image: linear-gradient(#009efb, #009efb), linear-gradient(#383f48, #383f48);
     background-size: 100% 2px, 100% 1px;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -3472,7 +3469,7 @@ Table- Footable
   color: #636c72;
   pointer-events: none;
   cursor: not-allowed;
-  background-color: #ffffff;
+  background-color: #263238;
   border-color: #ddd; }
 
 .footable .pagination li:first-child a {
@@ -3481,7 +3478,7 @@ Table- Footable
   border-top-left-radius: .25rem; }
 
 .footable-odd {
-  background: #f2f4f8; }
+  background: #383f48; }
 
 /*******************
 Icon list fontawesom
@@ -3490,7 +3487,7 @@ Icon list fontawesom
   cursor: pointer;
   line-height: 60px;
   white-space: nowrap;
-  color: #67757c; }
+  color: #747d8a; }
   .icon-list-demo div:hover {
     color: #263238; }
   .icon-list-demo div p {
@@ -3513,9 +3510,11 @@ Icon list fontawesom
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s; }
 
-.icon-list-demo .col-md-4, .icon-list-demo .col-3 {
+.icon-list-demo .col-md-4,
+.icon-list-demo .col-3 {
   border-radius: 4px; }
-  .icon-list-demo .col-md-4:hover, .icon-list-demo .col-3:hover {
+  .icon-list-demo .col-md-4:hover,
+  .icon-list-demo .col-3:hover {
     background-color: #ebf3f5; }
 
 .icon-list-demo .div:hover i {
@@ -3582,7 +3581,7 @@ Bootstrap Switch
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default {
   color: #263238;
-  background: #f2f4f8; }
+  background: #383f48; }
 
 .onoffswitch {
   position: relative;
@@ -3609,7 +3608,8 @@ Bootstrap Switch
   -o-transition: margin 0.3s ease-in 0s;
   transition: margin 0.3s ease-in 0s; }
 
-.onoffswitch-inner:before, .onoffswitch-inner:after {
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
   display: block;
   float: left;
   width: 50%;
@@ -3661,7 +3661,9 @@ Date paginator page
 .dp-selected[style] {
   background-color: #009efb !important; }
 
-.datepaginator-sm .pagination li a, .datepaginator-lg .pagination li a, .datepaginator .pagination li a {
+.datepaginator-sm .pagination li a,
+.datepaginator-lg .pagination li a,
+.datepaginator .pagination li a {
   padding: 0 5px;
   height: 60px;
   border: 1px solid rgba(120, 130, 140, 0.13);
@@ -3685,7 +3687,7 @@ Grid page
   padding-top: 10px;
   padding-bottom: 10px;
   border: 1px solid #d9d9d9;
-  background-color: #f2f4f8; }
+  background-color: #383f48; }
 
 /*******************
 Vertical tabs
@@ -3708,13 +3710,17 @@ Vertical tabs
     padding: 20px;
     vertical-align: top; }
 
-.tabs-vertical li .nav-link.active, .tabs-vertical li .nav-link:hover, .tabs-vertical li .nav-link.active:focus {
+.tabs-vertical li .nav-link.active,
+.tabs-vertical li .nav-link:hover,
+.tabs-vertical li .nav-link.active:focus {
   background: #009efb;
   border: 0px;
   color: #ffffff; }
 
 /*Custom vertical tab*/
-.customvtab .tabs-vertical li .nav-link.active, .customvtab .tabs-vertical li .nav-link:hover, .customvtab .tabs-vertical li .nav-link:focus {
+.customvtab .tabs-vertical li .nav-link.active,
+.customvtab .tabs-vertical li .nav-link:hover,
+.customvtab .tabs-vertical li .nav-link:focus {
   background: #ffffff;
   border: 0px;
   border-right: 2px solid #009efb;
@@ -3728,7 +3734,7 @@ Vertical tabs
 .customtab2 li a.nav-link {
   border: 0px;
   margin-right: 3px;
-  color: #67757c; }
+  color: #747d8a; }
   .customtab2 li a.nav-link.active {
     background: #009efb;
     color: #ffffff; }
@@ -3807,15 +3813,16 @@ Notification page Jquery toaster
 list and media
 ******************/
 .list-group a.list-group-item:hover {
-  background: #f2f4f8; }
+  background: #383f48; }
 
-.list-group-item.active, .list-group .list-group-item.active:hover {
+.list-group-item.active,
+.list-group .list-group-item.active:hover {
   background: #009efb;
   border-color: #009efb; }
 
 .list-group-item.disabled {
   color: #99abb4;
-  background: #f2f4f8; }
+  background: #383f48; }
 
 .media {
   border: 1px solid rgba(120, 130, 140, 0.13);
@@ -3838,7 +3845,7 @@ User card page
     .el-element-overlay .el-card-item .el-card-content h3 {
       margin: 0px; }
     .el-element-overlay .el-card-item .el-card-content a {
-      color: #67757c; }
+      color: #747d8a; }
       .el-element-overlay .el-card-item .el-card-content a:hover {
         color: #009efb; }
   .el-element-overlay .el-card-item .el-overlay-1 {
@@ -3937,7 +3944,7 @@ Timeline page
   left: 50%;
   width: 3px;
   margin-left: -1.5px;
-  background-color: #f2f4f8; }
+  background-color: #383f48; }
 
 .timeline > li {
   position: relative;
@@ -4055,7 +4062,8 @@ Horizontal Timeline page
   padding-bottom: 6px;
   color: #009efb; }
 
-.cd-horizontal-timeline .filling-line, .cd-horizontal-timeline .events a.selected::after {
+.cd-horizontal-timeline .filling-line,
+.cd-horizontal-timeline .events a.selected::after {
   background: #009efb; }
 
 .cd-horizontal-timeline .events a.selected::after {
@@ -4085,7 +4093,7 @@ Horizontal Timeline page
   width: 36px; }
 
 .dd3-handle:before {
-  color: #67757c;
+  color: #747d8a;
   top: 7px; }
 
 /*******************
@@ -4924,12 +4932,14 @@ Error Page
 /*******************
 google map Page
 ******************/
-.gmaps, .gmaps-panaroma {
+.gmaps,
+.gmaps-panaroma {
   height: 300px; }
 
-.gmaps, .gmaps-panaroma {
+.gmaps,
+.gmaps-panaroma {
   height: 300px;
-  background: #f2f4f8;
+  background: #383f48;
   border-radius: 3px; }
 
 .gmaps-overlay {
@@ -4964,7 +4974,8 @@ google map Page
 /*******************
 vector map Page
 ******************/
-.jvectormap-zoomin, .jvectormap-zoomout {
+.jvectormap-zoomin,
+.jvectormap-zoomout {
   width: 10px;
   height: 10px;
   line-height: 10px; }
@@ -5161,7 +5172,7 @@ chat application Page
         right: 20px;
         bottom: 10px; }
         .chat-main-box .chat-right-aside .send-chat-box .custom-send .cst-icon {
-          color: #67757c;
+          color: #747d8a;
           margin-right: 10px; }
 
 /*******************
@@ -5172,9 +5183,9 @@ Email inbox Page
   border-radius: 0px;
   border-left: 3px solid transparent; }
   .inbox-panel .list-group .list-group-item a {
-    color: #67757c; }
+    color: #747d8a; }
   .inbox-panel .list-group .list-group-item.active, .inbox-panel .list-group .list-group-item:hover {
-    background: #f2f4f8;
+    background: #383f48;
     border-left: 3px solid #009efb; }
 
 .inbox-center .unread td {
@@ -5185,7 +5196,7 @@ Email inbox Page
   white-space: nowrap; }
 
 .inbox-center a {
-  color: #67757c;
+  color: #747d8a;
   padding: 2px 0 3px 0;
   overflow: hidden;
   vertical-align: middle;
@@ -5237,7 +5248,7 @@ Contact app Page
     .list-style-none li a {
       padding: 15px 10px;
       display: block;
-      color: #67757c; }
+      color: #747d8a; }
       .list-style-none li a:hover {
         color: #009efb; }
       .list-style-none li a span {
@@ -5246,18 +5257,13 @@ Contact app Page
 .slimScrollBar {
   z-index: 10 !important; }
 
-.carousel-item-next, .carousel-item-prev, .carousel-item.active {
-  display: block; }
-
-/*Documentation page*/
-.plugin-details {
-  display: none; }
-
-.plugin-details-active {
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
   display: block; }
 
 /*
-Template Name: Material Pro Admin
+Template Name: Monster Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
@@ -5424,7 +5430,7 @@ sidebar navigation
         font-size: 12px;
         margin-bottom: 0px;
         padding: 14px 14px 14px 20px;
-        color: #263238;
+        color: #99abb4;
         font-weight: 500; }
       .sidebar-nav ul li.nav-devider {
         height: 1px;
@@ -5446,7 +5452,6 @@ sidebar navigation
     width: 27px;
     height: 27px;
     font-size: 21px;
-    line-height: 27px;
     display: inline-block;
     vertical-align: middle;
     color: #99abb4; }
@@ -5568,7 +5573,7 @@ When click on sidebar toggler and also for tablet
     left: 0px; } }
 
 /*
-Template Name: Material Pro Admin
+Template Name: Monster Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
@@ -5602,7 +5607,7 @@ File: scss
     text-decoration: none;
     padding: 9px 15px; }
     .mailbox .message-center a:hover {
-      background: #f2f4f8; }
+      background: #383f48; }
     .mailbox .message-center a div {
       white-space: normal; }
     .mailbox .message-center a .user-img {
@@ -5643,7 +5648,7 @@ File: scss
         -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         overflow: hidden;
-        color: #67757c;
+        color: #747d8a;
         white-space: nowrap; }
 
 /*******************
@@ -5773,8 +5778,7 @@ File: scss
         color: #99abb4; }
       .chat-list li .chat-content .box {
         display: inline-block;
-        margin-bottom: 10px;
-        color: #263238; }
+        margin-bottom: 10px; }
     .chat-list li .chat-time {
       display: inline-block;
       text-align: right;
@@ -5816,7 +5820,7 @@ File: scss
     text-decoration: none;
     padding: 9px 15px; }
     .message-box .message-widget a:hover {
-      background: #f2f4f8; }
+      background: #383f48; }
     .message-box .message-widget a:last-child {
       border-bottom: 0px; }
     .message-box .message-widget a div {
@@ -5859,7 +5863,7 @@ File: scss
         -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         overflow: hidden;
-        color: #67757c;
+        color: #747d8a;
         white-space: nowrap; }
 
 /*******************/
@@ -5901,7 +5905,7 @@ File: scss
   border-color: rgba(120, 130, 140, 0.13) !important; }
 
 .fc th.fc-widget-header {
-  color: #67757c;
+  color: #747d8a;
   font-size: 13px;
   font-weight: 300;
   line-height: 20px;
@@ -5929,10 +5933,10 @@ File: scss
 .fc-button {
   background: #ffffff;
   border: 1px solid rgba(120, 130, 140, 0.13);
-  color: #67757c;
+  color: #747d8a;
   text-transform: capitalize; }
   .fc-button:hover {
-    background: #f2f4f8;
+    background: #383f48;
     opacity: 0.8; }
 
 .fc-text-arrow {
@@ -5944,7 +5948,7 @@ File: scss
 
 .fc-unthemed .fc-today {
   border: 1px solid #fc4b6c;
-  background: #f2f4f8 !important; }
+  background: #383f48 !important; }
 
 .fc-state-highlight {
   background: #f0f0f0; }
@@ -6262,7 +6266,7 @@ File: scss
       margin-bottom: 0px !important; }
 
 /*
-Template Name: Material Pro Admin
+Template Name: Monster Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
@@ -6570,7 +6574,7 @@ File: scss
   color: #ffffff; }
 
 /*
-Template Name: Material Pro Admin
+Template Name: Monster Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
@@ -6780,7 +6784,7 @@ Email: niravjoshi87@gmail.com
 File: scss
 */
 /*
-Template Name: Material Pro Admin
+Template Name: Monster Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
@@ -8009,3 +8013,138 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
     background-color: rgba(255, 255, 255, 0.5); }
     .switch label input[type=checkbox]:checked + .lever.switch-col-white:after {
       background-color: #ffffff; }
+
+/*
+Template Name: Monster Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*Theme Colors*/
+.form-control, .btn-secondary:hover, .form-control:focus, .btn-secondary.active, .card-outline-danger, .card-outline-info, .card-outline-warning, .card-outline-success, .card-outline-primary, .popover-title, .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--multiple, .bootstrap-tagsinput, .footable .pagination li a, .select2-container--default .select2-selection--single .select2-selection__rendered, .ms-container .ms-selectable li.ms-elem-selectable, .ms-container .ms-selection li.ms-elem-selection, .jsgrid-row > .jsgrid-cell, .page-item .page-link, .page-item.disabled .page-link, .minimal-faq .card .card-header, .mega-dropdown .nav-accordion .card-header {
+  background-color: #263238; }
+
+.right-sidebar, .select2-dropdown, .dropify-wrapper, .dropify-wrapper .dropify-preview, .wizard-content .wizard > .steps > ul > li.current .step, .wizard-content .wizard > .steps > ul > li .step, .wizard-content .wizard.wizard-circle > .steps > ul > li.current:after, .wizard-content .wizard.wizard-circle > .steps > ul > li.current ~ li:after, .wizard-content .wizard.wizard-circle > .steps > ul > li.current ~ li:before, .note-editor.note-frame .note-editing-area .note-editable, .modal-content, .jsgrid-alt-row > .jsgrid-cell, .css-bar:after {
+  background: #383f48; }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, .footable .pagination li a, .select2-container--default .select2-selection--single .select2-selection__rendered, .ms-container .ms-selectable li.ms-elem-selectable, .ms-container .ms-selection li.ms-elem-selection, .close, .page-item .page-link {
+  color: #ffffff; }
+
+/******************* 
+Border Colors
+*******************/
+.table td, .nav-tabs, hr, .form-control, ul.wysihtml5-toolbar, .tabcontent-border, .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--multiple .select2-selection__choice, .bootstrap-tagsinput, .ms-container .ms-selectable li.ms-elem-selectable, .ms-container .ms-selection li.ms-elem-selection, .ms-container .ms-list, .wizard-content .wizard.wizard-circle > .steps .step, .table-bordered, .modal-footer, .modal-header, .jsgrid-header-row > .jsgrid-header-cell, .jsgrid-edit-row > .jsgrid-cell, .jsgrid-filter-row > .jsgrid-cell, .jsgrid-grid-body, .jsgrid-grid-header, .jsgrid-header-row > .jsgrid-header-cell, .jsgrid-insert-row > .jsgrid-cell, .bootstrap-table .table > thead > tr > th, .bootstrap-table .table, .fixed-table-container, .page-item .page-link, .page-item.disabled .page-link, .featured-plan .pricing-body, .footable .pagination li a, .footable .pagination li.disabled a, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button {
+  border-color: rgba(120, 130, 140, 0.13); }
+
+/******************* 
+/*Background Colors light*/
+/*******************/
+.progress, .fc-day, .css-bar > i, .dropzone, code, .popover, .grid-stack-item-content, .form-control:disabled, .form-control[readonly], .input-group-addon, .select2-container--default .select2-selection--multiple .select2-selection__choice, .ms-container .ms-selectable, .ms-container .ms-selection, .wizard-content .wizard > .actions > ul > li > a[href="#previous"], .jsgrid-grid-header, .jsgrid-filter-row > .jsgrid-cell, .dropdown-menu, .mega-dropdown .dropdown-menu {
+  background-color: #383f48; }
+
+.grid-stack-item-content, .input-group-addon, .wizard-content .wizard > .steps > ul > li.current > a, .mailbox ul li .drop-title, .topbar .navbar-light .navbar-nav .nav-link {
+  color: #ffffff; }
+
+/******************* 
+/*Background Colors border*/
+/*******************/
+.fc th.fc-mon, .fc th.fc-wed, .fc th.fc-fri, .fc th.fc-sun, .fc th.fc-tue, .fc th.fc-thu, .fc th.fc-sat {
+  background: rgba(120, 130, 140, 0.13); }
+
+/******************* 
+/*Background Colors dark*/
+/*******************/
+.topbar .top-navbar .app-search .srh-btn {
+  background: none; }
+
+.btn-secondary, .glyphs.character-mapping input {
+  background: #383f48;
+  border-color: #d9d9d9;
+  color: #747d8a; }
+  .btn-secondary:hover, .btn-secondary.active, .glyphs.character-mapping input:hover, .glyphs.character-mapping input.active {
+    color: #747d8a;
+    border-color: #d9d9d9; }
+
+.custom-select {
+  border-color: #d9d9d9;
+  color: #747d8a; }
+
+.checkbox label::after, .glyphs.character-mapping li, .breadcrumb-item.active, .dropdown-menu {
+  color: #747d8a; }
+
+.card-header, .card-footer, .jsgrid-header-row > .jsgrid-header-cell, .featured-plan .pricing-body {
+  background-color: #1a1f27; }
+
+.vtabs .tabs-vertical li .nav-link {
+  color: #747d8a; }
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+  background-color: #263238;
+  border-color: rgba(120, 130, 140, 0.13) rgba(120, 130, 140, 0.13) #263238;
+  color: #fff; }
+
+/******************* 
+/*Background Colors Transparent*/
+/*******************/
+.list-group-item, .checkbox label::before, .footer, .btn-outline-primary, .customvtab .tabs-vertical li .nav-link.active, .customvtab .tabs-vertical li .nav-link:hover, .customvtab .tabs-vertical li .nav-link:focus, .bd-example-popover-static, .myadmin-dd .dd-list .dd-item .dd-handle, .myadmin-dd-empty .dd-list .dd3-content, .myadmin-dd-empty .dd-list .dd3-handle, .highlight, .custom-file-control {
+  background: transparent; }
+
+.tabs-vertical li .nav-link.active, .tabs-vertical li .nav-link:hover, .tabs-vertical li .nav-link.active:focus, .dd-item > button {
+  color: #ffffff; }
+
+/******************* 
+/*Border Colors Transparent*/
+/*******************/
+.comment-widgets .comment-row, .stylish-table tbody tr {
+  border-left-color: transparent; }
+
+.calendar-events, .popover-title {
+  border-color: transparent; }
+
+.popover.bs-tether-element-attached-bottom::after, .popover.popover-top::after {
+  border-top-color: #383f48; }
+
+.popover.bs-tether-element-attached-top::after, .popover.popover-bottom::after {
+  border-bottom-color: #383f48;
+  top: -9px; }
+
+.popover.bs-tether-element-attached-left::after, .popover.popover-right::after {
+  border-right-color: #383f48; }
+
+.popover.bs-tether-element-attached-right::after, .popover.popover-left::after {
+  border-left-color: #383f48; }
+
+.bootstrap-switch .bootstrap-switch-label {
+  background: #263238; }
+
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default, .list-group-item, .pagination > li > a, .pagination > li > span {
+  color: #747d8a; }
+
+.list-group-item, .custom-file-control {
+  border-color: rgba(120, 130, 140, 0.13); }
+
+a.list-group-item:hover {
+  color: #ffffff; }
+
+.bootstrap-switch {
+  border-color: rgba(120, 130, 140, 0.13); }
+
+.dp-off {
+  background-color: #263238 !important; }
+
+/******************* 
+/*Dashboard 1*/
+/*******************/
+.total-revenue4 .ct-series-a .ct-line, .total-revenue4 .ct-series-b .ct-line {
+  stroke-width: 2px; }
+
+.ct-label, .ct-grid {
+  fill: rgba(255, 255, 255, 0.3);
+  stroke: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3); }
+
+.irs-line {
+  opacity: 0.1; }
+
+.mega-dropdown .dropdown-menu {
+  background-image: none; }

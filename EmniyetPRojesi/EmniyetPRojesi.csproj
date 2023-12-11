@@ -257,6 +257,7 @@
     <Compile Include="Controllers\IceriksController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LoglarsController.cs" />
+    <Compile Include="Controllers\RaporController.cs" />
     <Compile Include="Controllers\TursController.cs" />
     <Compile Include="Controllers\YoneticilerController.cs" />
     <Compile Include="Global.asax.cs">
@@ -340,16 +341,11 @@
     <Content Include="Designer\css\colors\purple.css" />
     <Content Include="Designer\css\colors\red-dark.css" />
     <Content Include="Designer\css\colors\red.css" />
-    <Content Include="Designer\css\form.css" />
-    <Content Include="Designer\css\icons\favicon.png" />
-    <Content Include="Designer\css\icons\font-awesome\css\font-awesome.css" />
-    <Content Include="Designer\css\icons\font-awesome\old\css\font-awesome.css" />
     <Content Include="Designer\css\icons\simple-line-icons\css\simple-line-icons.css" />
     <Content Include="Designer\css\icons\themify-icons\themify-icons.css" />
     <Content Include="Designer\css\spinners.css" />
     <Content Include="Designer\css\style.css" />
     <Content Include="Designer\images.jpg" />
-    <Content Include="Designer\js\bootstrap.js" />
     <Content Include="Designer\js\chat.js" />
     <Content Include="Designer\js\custom.js" />
     <Content Include="Designer\js\custom.min.js" />
@@ -367,8 +363,6 @@
     <Content Include="Designer\js\jsgrid-init.js" />
     <Content Include="Designer\js\mask.js" />
     <Content Include="Designer\js\morris-data.js" />
-    <Content Include="Designer\js\perfect-scrollbar.min.js" />
-    <Content Include="Designer\js\popper.min.js" />
     <Content Include="Designer\js\sidebarmenu.js" />
     <Content Include="Designer\js\toastr.js" />
     <Content Include="Designer\js\validation.js" />
@@ -5711,6 +5705,7 @@
     <Content Include="Designer\scss\colors\purple.scss" />
     <Content Include="Designer\scss\colors\red-dark.scss" />
     <Content Include="Designer\scss\colors\red.scss" />
+    <Content Include="Designer\scss\dark.scss" />
     <Content Include="Designer\scss\grid.scss" />
     <Content Include="Designer\scss\icons\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="Designer\scss\icons\font-awesome\fonts\fontawesome-webfont.ttf" />
@@ -5958,6 +5953,7 @@
     <Content Include="Views\BirimYoneticis\Index.cshtml" />
     <Content Include="Views\Iceriks\Rapor.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Rapor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

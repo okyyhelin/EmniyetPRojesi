@@ -1,66 +1,87 @@
 ﻿@model IEnumerable<EmniyetPRojesi.Models.Icerik>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "İçerikler";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Birimler.BirimAdi)
-        </th>
+<div class="row page-titles">
+    <div class="col-md-5 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+            <li class="breadcrumb-item active">İçerikler</li>
+        </ol>
+    </div>
+</div>
 
 
-        <th>
-            @Html.DisplayNameFor(model => model.Tur.TurAdi)
-        </th>
+<div class="row">
 
-        <th>
-            @Html.DisplayNameFor(model => model.QR)
-        </th>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <p>
+                    @Html.ActionLink("Create New", "Create")
+                </p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Birimler.BirimAdi)
+                        </th>
 
-        <th>
-            Okunma Sayısı
-        </th>
 
-        <th>
-            @Html.DisplayNameFor(model => model.Yonetici.TC)
-        </th>
-        <th></th>
-    </tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tur.TurAdi)
+                        </th>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Birimler.BirimAdi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tur.TurAdi)
-            </td>
-            <td>
-                <img src="@item.QR" width="50" />
-            </td>
->
-            <td>
-                @item.Rapor.Count()
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Yonetici.AdSoyad)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.IcerikID }, new { @class = "btn bt-sm btn-outline-info" }) |
-                @Html.ActionLink("Details", "Details", new { id = item.IcerikID }, new { @class = "btn bt-sm bt-outline-info" }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.IcerikID }, new { @clas = "btn bt-sm bt-outline-info" })  |
-                @Html.ActionLink("Rapor", "Rapor", new { id = item.IcerikID }, new { @clas = "btn bt-sm bt-outline-info" })
-            </td>
-        </tr>
-    }
+                        <th>
+                            @Html.DisplayNameFor(model => model.QR)
+                        </th>
 
-</table>
+                        <th>
+                            Okunma Sayısı
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Yonetici.TC)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Birimler.BirimAdi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tur.TurAdi)
+                            </td>
+                            <td>
+                                <img src="@item.QR" width="50" />
+                            </td>
+                            >
+                            <td>
+                                @item.Rapor.Count()
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Yonetici.AdSoyad)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.IcerikID }, new { @class = "btn bt-sm btn-outline-info" }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.IcerikID }, new { @class = "btn bt-sm bt-outline-info" }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.IcerikID }, new { @clas = "btn bt-sm bt-outline-info" })  |
+                                @Html.ActionLink("Rapor", "Rapor", new { id = item.IcerikID }, new { @clas = "btn bt-sm bt-outline-info" })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+
+        </div>
+      
+    </div>
+
+</div>
+

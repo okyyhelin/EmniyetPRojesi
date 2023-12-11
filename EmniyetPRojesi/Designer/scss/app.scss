@@ -1,5 +1,5 @@
 /*
-Template Name: Material Pro Admin
+Template Name: Monster Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
@@ -19,7 +19,9 @@ File: scss
 /******************* 
 Global Styles 
 *******************/
-
+.card{
+    background:$dark;
+}
 * {
     outline: none;
 }
@@ -48,9 +50,9 @@ a.link{
     }
 }
 .img-responsive{
+    display: inline-block;
     width: 100%;
     height: auto;
-    display: inline-block;
 }
 .img-rounded{
     border-radius: $radius;
@@ -114,14 +116,12 @@ h6 {
     border-radius: $radius;
     padding: 10px;
 }
-html body {
 .dl{
-    display: inline-block;
+    display: inline-block!important;
 }
 .db{
-    display: block;
+    display: block!important;
 }
-}    
 .no-wrap{
     td, th{
         white-space: nowrap;
@@ -812,7 +812,10 @@ Table Cell
 .table-hover tbody tr:hover{
     background:$light;
 }
-
+.jqstooltip {
+    width: auto !important;
+    height: auto !important;
+}
 .v-middle{
     td, th{
         vertical-align:middle;
@@ -1552,7 +1555,6 @@ Buttons
     background-color: #171515;
 }
 
-
 /*******************
 Notify
 *******************/
@@ -1636,8 +1638,6 @@ Notify
         opacity: 0.0;
     }
 }
-
-
 
 /*******************
 File Upload 
@@ -1794,19 +1794,7 @@ Layouts
 .card-outline-danger, .card-outline-info, .card-outline-warning, .card-outline-success, .card-outline-primary{
     background: $white;
 }
-.card-fullscreen{
-    position: fixed;
-    top:0px;
-    left:0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    overflow: auto;
-}
-.card .card-header{
-    background: $white;
-    border-bottom: 0px;
-}
+
 /*******************/
 /*widgets -app*/
 /*******************/
@@ -1827,10 +1815,4 @@ Layouts
     .page-wrapper{
         margin-left: 0px;
     }
-}
-
-.fix-width{
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
 }
