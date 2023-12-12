@@ -345,7 +345,7 @@
     <Content Include="Designer\css\icons\themify-icons\themify-icons.css" />
     <Content Include="Designer\css\spinners.css" />
     <Content Include="Designer\css\style.css" />
-    <Content Include="Designer\images.jpg" />
+    <Content Include="Designer\hoca.jpg" />
     <Content Include="Designer\js\chat.js" />
     <Content Include="Designer\js\custom.js" />
     <Content Include="Designer\js\custom.min.js" />
@@ -2962,6 +2962,7 @@
     <Content Include="Designer\plugins\x-editable\dist\jqueryui-editable\img\loading.gif" />
     <Content Include="Designer\plugins\x-editable\dist\jqueryui-editable\js\jqueryui-editable.js" />
     <Content Include="Designer\plugins\x-editable\dist\jqueryui-editable\js\jqueryui-editable.min.js" />
+    <Content Include="Designer\polis.jpg" />
     <Content Include="Designer\scss\icons\flag-icon-css\flag-icon.min.css" />
     <Content Include="Designer\scss\icons\flag-icon-css\flags\ad.svg" />
     <Content Include="Designer\scss\icons\flag-icon-css\flags\ae.svg" />
@@ -3255,7 +3256,6 @@
     <Content Include="Designer\scss\icons\weather-icons\less\css\variables-night.css" />
     <Content Include="Designer\scss\icons\weather-icons\less\css\variables-time.css" />
     <Content Include="Designer\scss\icons\weather-icons\less\css\variables-wind-names.css" />
-    <Content Include="Designer\van_emniyet_logo.png" />
     <Content Include="Designer\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Designer\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Designer\vendor\bootstrap\js\bootstrap.js" />
