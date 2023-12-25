@@ -13,5 +13,7 @@ namespace EmniyetPRojesi.Controllers
         {
             return View();
         }
+
+  
     }
 }

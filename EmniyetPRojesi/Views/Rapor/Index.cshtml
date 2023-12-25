@@ -3,7 +3,49 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json",
+                url: '/Chart/VisualizeResult2', // Uygun URL'yi buraya ekleyin
+                success: function (result) {
+                    google.charts.load('current', { 'packages': ['corechart'] });
+                    google.charts.setOnLoadCallback(function () {
+                        drawChart(result);
+                    });
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        });
 
+        function drawChart(result) {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('number', 'Stoklar');
+            var dataArray = [];
+            $.each(result, function (i, obj) {
+                dataArray.push([obj.BlogName, obj.Rating]);
+            });
+            data.addRows(dataArray);
+
+            var pieChartOptions = {
+                title: "Blog Derece Pie Grafiği",
+                width: 1000,
+                height: 700,
+                bar: {groupWidth:"20%"},
+            };
+
+            var pieChart = new google.visualization.PieChart(document.getElementById('Piechart_div'));
+
+            pieChart.draw(data, pieChartOptions);
+        }
+</script>
 <div class="row">
     <!-- Column -->
     <div class="col-lg-3 col-md-6">
@@ -157,6 +199,10 @@
                         </li>
                     </ul>
                 </div>
+
+                <div id="Piechart_div"></div>
+
+
             </div>
         </div>
     </div>

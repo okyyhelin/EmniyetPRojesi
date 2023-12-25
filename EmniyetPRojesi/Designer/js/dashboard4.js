@@ -55,7 +55,7 @@ $(function () {
     // ==============================================================
     jQuery('#visitfromworld').vectorMap({
         map: 'world_mill_en'
-        , backgroundColor: 'transparent'
+        , backgroundColor: '#fff'
         , borderColor: '#ccc'
         , borderOpacity: 0.9
         , borderWidth: 1
@@ -63,7 +63,7 @@ $(function () {
         , color: '#ddd'
         , regionStyle: {
             initial: {
-                fill: 'transparent' 
+                fill: '#fff' 
             }
         }
         , markerStyle: {

@@ -1,5 +1,5 @@
 /*
-Template Name: Monster Admin
+Template Name: Material Pro Admin
 Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: js
@@ -61,13 +61,8 @@ $(function () {
     });
     // topbar stickey on scroll
     
-    $(".fix-header .topbar").stick_in_parent({
-        
-    });
-   
-    $('.floating-labels .form-control').on('focus blur', function (e) {
-        $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
-    }).trigger('blur'); 
+    $(".fix-header .topbar").stick_in_parent({});
+    
     
     // this is for close icon when navigation open in mobile view
     $(".nav-toggler").click(function () {
@@ -87,8 +82,11 @@ $(function () {
     $(".right-side-toggle").click(function () {
         $(".right-sidebar").slideDown(50);
         $(".right-sidebar").toggleClass("shw-rside");
-        
     });
+
+    $('.floating-labels .form-control').on('focus blur', function (e) {
+        $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+    }).trigger('blur');
 
     // ============================================================== 
     // Auto select left navbar
@@ -114,15 +112,15 @@ $(function () {
     $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
-        // ============================================================== 
-        //Popover
-        // ============================================================== 
+    // ============================================================== 
+    //Popover
+    // ============================================================== 
     $(function () {
             $('[data-toggle="popover"]').popover()
         })
-        // ============================================================== 
-        // Sidebarmenu
-        // ============================================================== 
+    // ============================================================== 
+    // Sidebarmenu
+    // ============================================================== 
     $(function () {
         $('#sidebarnav').metisMenu();
     });
@@ -191,7 +189,7 @@ $(function () {
     // ============================================================== 
     // Collapsable cards
     // ==============================================================
-    $('a[data-action="collapse"]').on('click',function(e){
+        $('a[data-action="collapse"]').on('click',function(e){
             e.preventDefault();
             $(this).closest('.card').find('[data-action="collapse"] i').toggleClass('ti-minus ti-plus');
             $(this).closest('.card').children('.card-body').collapse('toggle');
@@ -207,8 +205,7 @@ $(function () {
         // Close Card
         $('a[data-action="close"]').on('click',function(){
             $(this).closest('.card').removeClass().slideUp('fast');
-        });    
-    
+        });
     // ============================================================== 
     // This is for the sparkline charts which is coming in the bradcrumb section
     // ==============================================================

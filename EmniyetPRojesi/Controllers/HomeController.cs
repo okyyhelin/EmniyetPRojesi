@@ -35,5 +35,16 @@ namespace EmniyetPRojesi.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult _Ust()
+        {
+            Entities1 db = new Entities1();
+
+            ViewBag.IcerikSayisi = db.Icerik.Select(s=>s.IcerikID).Count().ToString();
+            ViewBag.Birim = db.Icerik.GroupBy(g => g.Birimler.BirimAdi).OrderByDescending(o => o.Count()).Select(s => s.Key).FirstOrDefault();
+           
+            return PartialView();
+        }
+
+
     }
 }
