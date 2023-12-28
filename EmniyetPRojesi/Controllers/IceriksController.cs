@@ -13,6 +13,7 @@ using static QRCoder.PayloadGenerator;
 
 namespace EmniyetPRojesi.Controllers
 {
+    [Authorize]
     public class IceriksController : Controller
     {
         private Entities1 db = new Entities1();

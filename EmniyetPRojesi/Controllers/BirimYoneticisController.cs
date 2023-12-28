@@ -10,6 +10,7 @@ using EmniyetPRojesi.Models;
 
 namespace EmniyetPRojesi.Controllers
 {
+    [Authorize]
     public class BirimYoneticisController : Controller
     {
         private Entities1 db = new Entities1();

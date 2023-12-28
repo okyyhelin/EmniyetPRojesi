@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace EmniyetPRojesi.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         // GET: Home
@@ -15,7 +16,7 @@ namespace EmniyetPRojesi.Controllers
             return View();
         }
 
-        public ActionResult Icerik(int id)
+        public ActionResult Icerik(int? id)
         {
             if(id != null)
             {

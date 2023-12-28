@@ -55,9 +55,9 @@
                     @Html.DisplayFor(modelItem => item.Yonetici.AdSoyad)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.IcerikID }, new { @class = "btn bt-sm btn-outline-info" }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.IcerikID }, new { @class = "btn bt-sm bt-outline-info" }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.IcerikID }, new { @clas = "btn bt-sm bt-outline-info" })  |
+                    @Html.ActionLink("Edit", "Düzenleme", new { id = item.IcerikID }, new { @class = "btn bt-sm btn-outline-info" }) |
+                    @Html.ActionLink("Details", "Detay", new { id = item.IcerikID }, new { @class = "btn bt-sm bt-outline-info" }) |
+                    @Html.ActionLink("Delete", "Sil", new { id = item.IcerikID }, new { @clas = "btn bt-sm bt-outline-info" })  |
                     @Html.ActionLink("Rapor", "Rapor", new { id = item.IcerikID }, new { @clas = "btn bt-sm bt-outline-info" })
                 </td>
             </tr>

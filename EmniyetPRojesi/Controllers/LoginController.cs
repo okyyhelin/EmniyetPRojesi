@@ -1,9 +1,12 @@
 ﻿using EmniyetPRojesi.Models;
+using EmniyetPRojesi.Models.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace EmniyetPRojesi.Controllers
 {
@@ -15,14 +18,20 @@ namespace EmniyetPRojesi.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(string username, string password)
+        public ActionResult Index(string username, string password, string returnUrl)
         {
             Entities1 db = new Entities1();
-            var kullanici = db.Yonetici.Where(x => x.KullaniciAdi == username).FirstOrDefault();
+            var sifre = UygulamaHelper.CreateMD5(password);
+            var kullanici = db.Yonetici.Where(x => x.KullaniciAdi == username && x.Sifre == sifre).FirstOrDefault();
 
-            if (username == "admin" && password == "1234")
+            if (kullanici != null)
             {
-                HttpContext.Session.Add("Kullanici", kullanici);
+                FormsAuthentication.SetAuthCookie(kullanici.KullaniciAdi, false);
+                if(returnUrl != "")
+                {
+                    return Redirect(returnUrl);
+                }
+                else
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -30,6 +39,12 @@ namespace EmniyetPRojesi.Controllers
                 ViewBag.Message = "Kullanıcı adı veya şifre hatalıdır";
                 return View();
             }
+        }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index");
         }
     }
 }

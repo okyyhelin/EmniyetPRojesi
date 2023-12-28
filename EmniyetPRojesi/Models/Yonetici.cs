@@ -11,7 +11,7 @@ namespace EmniyetPRojesi.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Yonetici
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,7 +19,7 @@ namespace EmniyetPRojesi.Models
         {
             this.Icerik = new HashSet<Icerik>();
         }
-    
+
         public int YoneticiID { get; set; }
         public string TC { get; set; }
         public string Isim { get; set; }
@@ -29,13 +29,13 @@ namespace EmniyetPRojesi.Models
         public string EPosta { get; set; }
         public string Tel { get; set; }
 
-        public string AdSoyad 
+        public string AdSoyad
         {
             get
             {
                 return Isim + " " + Soyisim;
             }
-                }
+        }
 
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

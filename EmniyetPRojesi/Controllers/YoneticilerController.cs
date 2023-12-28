@@ -12,6 +12,7 @@ using EmniyetPRojesi.Models.Helper;
 
 namespace EmniyetPRojesi.Controllers
 {
+    [Authorize]
     public class YoneticilerController : Controller
     {
         private Entities1 db = new Entities1();
