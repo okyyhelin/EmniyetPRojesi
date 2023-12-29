@@ -27,7 +27,7 @@ namespace EmniyetPRojesi.Controllers
             if (kullanici != null)
             {
                 FormsAuthentication.SetAuthCookie(kullanici.KullaniciAdi, false);
-                if(returnUrl != "")
+                if(returnUrl == "")
                 {
                     return Redirect(returnUrl);
                 }
