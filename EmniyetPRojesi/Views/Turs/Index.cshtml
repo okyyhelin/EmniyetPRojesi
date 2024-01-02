@@ -24,9 +24,9 @@
             @Html.DisplayFor(modelItem => item.TurAdi)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TurID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TurID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TurID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.TurID } , new { @class = "btn btn-success btn-rounded btn-fw" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TurID }, new { @class = "btn btn-warning btn-rounded btn-fw" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TurID }, new { @class = "btn btn-danger btn-rounded btn-fw" })
         </td>
     </tr>
 }

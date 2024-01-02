@@ -4584,7 +4584,8 @@ readers do not read off random characters that represent icons */
   position: static;
   width: auto; }
 @font-face {
-  font-family: 'Font Awesome 5 Brands';
+  font-family: 'Font Awesome 5 
+      s';
   font-style: normal;
   font-weight: 400;
   font-display: block;

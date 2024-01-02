@@ -21,18 +21,19 @@ namespace EmniyetPRojesi.Controllers
         public ActionResult Index(string username, string password, string returnUrl)
         {
             Entities1 db = new Entities1();
-            var sifre = UygulamaHelper.CreateMD5(password);
+            //var sifre = UygulamaHelper.CreateMD5(password);
+            string sifre = password;
             var kullanici = db.Yonetici.Where(x => x.KullaniciAdi == username && x.Sifre == sifre).FirstOrDefault();
 
             if (kullanici != null)
             {
                 FormsAuthentication.SetAuthCookie(kullanici.KullaniciAdi, false);
-                if(returnUrl == "")
+                if (returnUrl == "")
                 {
                     return Redirect(returnUrl);
                 }
                 else
-                return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home");
             }
             else
             {

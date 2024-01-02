@@ -4,8 +4,11 @@
     ViewBag.Title = "İçerikler";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h2>Yüklenen İçerikler</h2>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <div class="text-right mb-3">
+              @Html.ActionLink("Yeni İçerik Ekle", "Create", null, new { @class = "btn btn-info" })
+        </div>
 </p>
 <div class="table-responsive">
     <table class="table table-striped">
@@ -54,11 +57,11 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Yonetici.AdSoyad)
                 </td>
-                <td>
-                    @Html.ActionLink("Edit", "Düzenleme", new { id = item.IcerikID }, new { @class = "btn bt-sm btn-outline-info" }) |
-                    @Html.ActionLink("Details", "Detay", new { id = item.IcerikID }, new { @class = "btn bt-sm bt-outline-info" }) |
-                    @Html.ActionLink("Delete", "Sil", new { id = item.IcerikID }, new { @clas = "btn bt-sm bt-outline-info" })  |
-                    @Html.ActionLink("Rapor", "Rapor", new { id = item.IcerikID }, new { @clas = "btn bt-sm bt-outline-info" })
+                <td class="text-right">
+                    @Html.ActionLink("Edit", "Düzenleme", new { id = item.IcerikID }, new { @class = "btn btn-success btn-rounded btn-fw" }) 
+                    @Html.ActionLink("Details", "Detay", new { id = item.IcerikID }, new { @class = "btn btn-warning btn-rounded btn-fw" }) 
+                    @Html.ActionLink("Delete", "Sil", new { id = item.IcerikID }, new { @class = "btn btn-danger btn-rounded btn-fw" })  
+                    @Html.ActionLink("Rapor", "Rapor", new { id = item.IcerikID }, new { @class = "btn btn-light btn-rounded btn-fw" })
                 </td>
             </tr>
         }
