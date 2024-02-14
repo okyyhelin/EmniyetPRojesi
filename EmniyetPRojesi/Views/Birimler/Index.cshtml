@@ -9,33 +9,33 @@
 
 <p>
     <div class="text-right mb-3">
-    
-    @Html.ActionLink("Yeni Birim Ekle", "Create", null, new { @class = "btn btn-info" })
-        </div>
+
+        @Html.ActionLink("Yeni Birim Ekle", "Create", null, new { @class = "btn btn-info" })
+    </div>
 </p>
 
 <div class="table-responsive">
     <table class="table table-striped">
-        
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BirimAdi)
-            </th>
-            <th></th>
-        </tr>
+</div>
+<tr>
+    <th>
+        @Html.DisplayNameFor(model => model.BirimAdi)
+    </th>
+    <th></th>
+</tr>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.BirimAdi)
-                </td>
-                <td class="text-right">
-                    @Html.ActionLink("Düzenle", "Edit", new { id = item.BirimID }, new { @class = "btn btn-success btn-rounded btn-fw" }) |
-                    @Html.ActionLink("Detay", "Details", new { id = item.BirimID }, new { @class = "btn btn-warning btn-rounded btn-fw" }) |
-                    @Html.ActionLink("Sil", "Delete", new { id = item.BirimID }, new { @class = "btn btn-danger btn-rounded btn-fw" })
-                </td>
-            </tr>
-        }
-
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirimAdi)
+        </td>
+        <td class="text-right">
+            @Html.ActionLink("Düzenle", "Edit", new { id = item.BirimID }, new { @class = "btn btn-success btn-rounded btn-fw" }) |
+            @Html.ActionLink("Detay", "Details", new { id = item.BirimID }, new { @class = "btn btn-warning btn-rounded btn-fw" }) |
+            @Html.ActionLink("Sil", "Delete", new { id = item.BirimID }, new { @class = "btn btn-danger btn-rounded btn-fw" })
+        </td>
+    </tr>
+}
+</table>
     </table>
